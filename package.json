@@ -1,0 +1,13 @@
+{
+  "name": "papajoke-faunadb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts":{
+    "dev":"netlify dev"
+  },
+  "dependencies": {
+    "dotenv": "^11.0.0",
+    "faunadb": "^4.4.1"
+  }
+}
