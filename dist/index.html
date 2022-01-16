@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Joke submission form</title>
+  </head>
+  <body>
+    <form action="/api/joke-submission" method="POST">
+      <div>
+        <label for="headline">What is the joke headline?</label>
+        <input name="headline" id="headline" value="Type a funny joke" />
+      </div>
+      <div>
+        <label for="punchline">What is the joke punchline?</label>
+        <input name="punchline" id="punchline" value="Type a funny punchline" />
+      </div>
+      <button>Add joke</button>
+    </form>
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const joke = Object.fromEntries(data.entries());
+        console.log(JSON.stringify(joke,null,2));
+      }
+
+      const form = document.querySelector("form");
+      form.addEventListener("submit", handleSubmit);
+    </script>
+  </body>
+</html>
