@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts":{
-    "dev":"netlify dev"
+  "scripts": {
+    "dev": "netlify dev"
   },
   "dependencies": {
     "dotenv": "^11.0.0",
     "faunadb": "^4.4.1"
+  },
+  "devDependencies": {
+    "netlify": "^10.1.1",
+    "netlify-cli": "^8.8.2"
   }
 }
