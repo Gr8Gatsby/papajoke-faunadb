@@ -2,6 +2,8 @@
 This is a sample project to implement papajoke API as serverless functions using Netlify, and implement the backend database in faunadb.
 
 
+[Netlify - Front End] - [Netlify functions - AWS Lamda] - [FaunaDB - Database]
+
 # Setup
 After cloning this repo
 

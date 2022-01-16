@@ -2,16 +2,29 @@
 <html>
   <head>
     <title>Joke submission form</title>
+    <style>
+      .input{
+        padding:5px;
+        margin:5px;
+      }
+      .label{
+        display: inline-block;
+        width: 200px;
+      }
+      body{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+      }
+    </style>
   </head>
   <body>
     <form action="/api/joke-submission" method="POST">
-      <div>
-        <label for="headline">What is the joke headline?</label>
-        <input name="headline" id="headline" value="Type a funny joke" />
+      <div >
+        <label class="label" for="headline">What is the joke headline?</label>
+        <input class="input" name="headline" id="headline" value="Type a funny joke" />
       </div>
       <div>
-        <label for="punchline">What is the joke punchline?</label>
-        <input name="punchline" id="punchline" value="Type a funny punchline" />
+        <label class="label" for="punchline">What is the joke punchline?</label>
+        <input class="input" name="punchline" id="punchline" value="Type a funny punchline" />
       </div>
       <button>Add joke</button>
     </form>
