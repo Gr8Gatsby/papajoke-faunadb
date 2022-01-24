@@ -26,9 +26,23 @@ const form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
 
 // Fauna DB
-var client = new faunadb.Client({
+const client = new faunadb.Client({
     secret: 'fnAEdlzXwIAAR96V1qh8VpvQMuPXCLxYsUK2ylhN',
     domain: 'db.us.fauna.com',
     port: 443,
     scheme: 'https',
 })
+
+const q = faunadb.query;
+
+function login() {
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+
+    client.query(
+        q.Call('UserLogin', username.value, password.value)
+    )
+        .then((ret) => console.log(ret))
+        .catch((err) => console.error('Error: %s', err))
+    console.log(`u:${username.value} p:${password.value}`);
+}
